@@ -1,6 +1,6 @@
 <?php
 // Define recipient email address.
-$to = "your-email@example.com";
+$to = "lyonsservicegroup@gmail.com";
 
 // Define email subject.
 $subject = "New quote request from website";

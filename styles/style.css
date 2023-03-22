@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+/* Taking off any effects on mobile */
+@media only screen and (max-width: 767px) {
+
+    /* Style rules for mobile screens */
+    *:hover {
+        pointer-events: none;
+    }
+}
+
 /* Body Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -158,6 +167,12 @@ section a:hover {
 
 .cta-button:hover {
     background-color: #04b022;
+}
+
+@media (max-width: 768px) {
+    .hero-section h3 {
+        font-size: 1.2rem;
+    }
 }
 
 /*Second Section Homepage*/
@@ -898,6 +913,12 @@ footer div {
     margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+    .services h2 {
+        font-size: 1.4rem;
+    }
+}
+
 /* Responsive Design */
 @media screen and (max-width: 700px) {
     .services-container {
@@ -1001,13 +1022,37 @@ footer div {
 }
 
 /* Media query for stacking elements vertically on smaller screens */
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 980px) {
+    .parallax-section {
+        background-attachment: scroll;
+        height: 800px;
+        }
+
+    .parallax-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo-homepage {
+        display: none;
+    }
 
     .about-homepage,
-    .contact-homepage,
-    .logo-homepage {
-        max-width: 100%;
-        margin-bottom: 1rem;
+    .contact-homepage {
+        width: 100%;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .about-homepage h3,
+    .contact-homepage h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-homepage p,
+    .contact-homepage p {
+        font-size: 1.1rem;
     }
 }
 
@@ -1185,10 +1230,11 @@ footer div {
 /* Services page styles */
 
 .services-title-page-subheading {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     text-align: center;
     font-weight: lighter;
-} 
+    font-size: 1.2rem;
+}
 
 .services-section-page {
     max-width: 1200px;
@@ -1206,17 +1252,15 @@ footer div {
 
 .service-page {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 3rem;
-    height: 50vh;
     /* Increased spacing between services */
 }
 
 .service-content-page {
-    flex: 1;
     box-sizing: border-box;
-    padding-right: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .service-title-page {
@@ -1248,9 +1292,8 @@ footer div {
 }
 
 .service-image-container {
-    flex: 1;
-    box-sizing: border-box;
-    padding-left: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 .service-image-container img {
@@ -1258,7 +1301,7 @@ footer div {
 }
 
 .service-img-page {
-    width: 100%;
+    width: 50%;
     height: auto;
     max-height: 250px;
     object-fit: cover;
@@ -1266,18 +1309,13 @@ footer div {
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .service-page {
-        flex-direction: column;
-    }
-
-    .service-content-page,
-    .service-image-container {
+    .service-content-page {
         padding: 0;
-        margin-bottom: 1rem;
     }
 
     .service-img-page {
-        max-height: none;
+        margin-top: 1rem;
+        width: 90%;
     }
 }
 
@@ -1334,10 +1372,14 @@ footer div {
     color: #04b022;
 }
 
+a .about-us-logo {
+    width: 50%;
+}
+
 /* Responsive styles */
 @media (max-width: 767px) {
     .about-us-header {
-        font-size: 20px;
+        font-size: 3rem;
     }
 
     .about-us-page-div {
