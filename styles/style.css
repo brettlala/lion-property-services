@@ -100,6 +100,407 @@ section a:hover {
     background-color: #333;
 }
 
+/* Hero Section Homepage Styles */
+.hero-section {
+    background-image: url('../media/laying-front-yard.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #1C1C1C;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #04b022;
+}
+
+/*Second Section Homepage*/
+
+.section-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.section-left {
+    max-width: 50%;
+    padding: 2rem;
+    background-color: #fff;
+    position: relative;
+}
+
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-paragraph {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-container .section-left a {
+    background-color: transparent;
+}
+
+a .section-button {
+    position: relative;
+    z-index: 10;
+}
+
+.section-button {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    background-color: #04b022;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.section-button:hover {
+    background-color: #333;
+}
+
+.section-image {
+    max-width: 50%;
+    padding: 2rem;
+    background-color: #cdefd3;
+}
+
+.section-image img {
+    width: 100%;
+    height: auto;
+}
+
+.logo {
+    max-width: 150px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 3;
+}
+
+.section-left::before {
+    content: '';
+    background-image: url('../media/766bgRemovedLion.png');
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 10%;
+    z-index: 2;
+}
+
+@media (max-width: 768px) {
+
+    .section-container {
+        flex-direction: column;
+        margin: 0 0 2rem;
+        padding: 0;
+    }
+
+    .section-image,
+    .section-left::before {
+        display: none;
+    }
+
+    .section-left {
+        max-width: 100%;
+        padding: 2rem 1rem;
+        background-color: #fff;
+    }
+
+    .section-heading {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .section-paragraph {
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .section-container .section-left a {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .section-button {
+        display: block;
+        margin: 1rem auto;
+    }
+}
+
+/* Combined About and Contact Section Homepage (3rd section)*/
+.about-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.about-contact h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.about,
+.contact,
+.estimate-cta {
+    flex-basis: 30%;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-btn,
+.contact-btn,
+.estimate-btn {
+    display: inline-block;
+    background-color: #1C1C1C;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.about-btn:hover,
+.contact-btn:hover {
+    background-color: #333;
+}
+
+.estimate-btn {
+    background-color: #04b022;
+    border: none;
+    cursor: pointer;
+}
+
+.estimate-btn:hover {
+    background-color: #039d1c;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .about,
+    .contact,
+    .estimate-cta {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Modal Pop up Home Page */
+.modal-content {
+    margin: 10% auto;
+    padding: 1rem;
+    width: 50%;
+    max-width: none;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 2px #1c1c1c;
+}
+
+.modal-content form {
+    max-width: 600px;
+    margin: 0 auto;
+
+}
+
+.modal-content .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modal-content label {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.modal-content input {
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.modal-content .submit-button {
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="tel"],
+.modal-content input[type="email"] {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #1C1C1C;
+}
+
+.modal-content .form-group select,
+.modal-content .form-group textarea {
+    border: 1px solid #1c1c1c;
+}
+
+.modal-content input[type="text"]:focus,
+.modal-content input[type="tel"]:focus,
+.modal-content input[type="email"]:focus {
+    border-bottom: 2px solid #04b022;
+}
+
+.modal-content .form-group select:focus,
+.modal-content .form-group textarea:focus {
+    border: 2px solid #04b022;
+}
+
+.submit-button-modal {
+    width: 100%;
+    font-family: "Segoe UI";
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #1c1c1c;
+    padding: 1rem 0;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
+
+.submit-button-modal:hover {
+    opacity: .9;
+}
+
+/* Thank you modal */
+
+#thank-you-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+#thank-you-modal .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    box-shadow: inset 0 0 0 2px #1c1c1c;
+}
+
+#thank-you-modal .modal-content h2 {
+    margin-bottom: 1rem;
+}
+
+#thank-you-modal .modal-content p {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#thank-you-modal .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#thank-you-modal .close:hover,
+#thank-you-modal .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 
 
 
@@ -179,6 +580,11 @@ section a:hover {
 
 body.overlay-active {
     overflow: hidden;
+}
+
+body.overlay-active .page-content *:not(.overlay) 
+body.overlay-active .page-content *:not(.overlay-active) {
+    visibility: hidden;
 }
 
 .nav-mobile.active {
@@ -667,6 +1073,18 @@ footer div {
     color: #1c1c1c;
     font-size: 2.5rem;
     margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+    #header-placeholder {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    #header-placeholder header {
+        height: 7rem;
+    }
 }
 
 /* Subheading */
@@ -1163,6 +1581,12 @@ a {
     padding: 20px;
 }
 
+.error-pg-section .fa-solid.fa-circle-exclamation {
+    font-size: 6.5rem;
+    color: #04b022;
+    padding: 2rem;
+}
+
 .error-pg-section h1 {
     font-size: 4rem;
     margin-bottom: 16px;
@@ -1183,5 +1607,11 @@ a {
 
     .error-pg-section p {
         font-size: 18px;
+    }
+
+    .error-pg-section .fa-solid.fa-circle-exclamation {
+        font-size: 4rem;
+        color: #04b022;
+        padding: 1rem;
     }
 }

@@ -30,8 +30,10 @@ $headers .= "X-Mailer: PHP/" . phpversion();
 if (mail($to, $subject, $message, $headers)) {
     // Email sent successfully.
     header("Location: thank-you.html"); // Redirect to thank-you page.
+    exit;
 } else {
     // Email failed to send.
     header("Location: error.html"); // Redirect to error page.
+    exit;
 }
 ?>
