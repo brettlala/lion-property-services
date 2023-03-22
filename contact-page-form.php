@@ -11,9 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email\r\nReply-To: $email\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "<p>Your message has been sent successfully!</p>";
+        header("Location: thank-you.html"); // Redirect to the custom Thank You page
+        exit;
     } else {
-        echo "<p>There was an error sending your message. Please try again later.</p>";
+        header("Location: error.html"); // Redirect to the custom Error page
+        exit;
     }
 }
 ?>

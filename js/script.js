@@ -7,10 +7,7 @@ document.addEventListener('headerAndFooterLoaded', function () {
     const mainContent = document.querySelector('main');
     const thankYouModal = document.getElementById('thank-you-modal');
 
-    // Hamburger 1 start
-
-
-
+// Hamburger Menu start
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const mobileNav = document.querySelector('.nav-mobile');
 
@@ -27,10 +24,7 @@ mobileNav.addEventListener('click', (event) => {
     document.body.classList.remove('overlay-active');
   }
 });
-
-
-
-    // Hamburger 1 end
+// Hamburger END
 
     if (ctaButton) {
       ctaButton.addEventListener('click', (e) => {

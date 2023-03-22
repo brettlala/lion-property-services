@@ -14,52 +14,45 @@
 </head>
 
 <body>
-<div id="header-placeholder"></div>
-<section>
-    <div class="contact-page">
-        <h1>Contact <span class="highlight">Us</span></h1>
-        <p class="subheading">At Lion Property Services, we're here to help. Find our contact information below or fill out
-            the form, and we'll get in touch with you shortly.</p>
-            <img src="/media/fullLogo512.png" alt="Logo" class="background-logo" />
-        <div class="contact-info">
-            <a href="tel:519-817-6900" class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>Co-Owner: Brett Lyons</span>
-                <span>519-817-6900</span>
-            </a>
-            <a href="tel:519-551-8304" class="contact-item">
-                <i class="fas fa-phone"></i>
-                <span>Co-Owner: Phil Lyons</span>
-                <span>519-551-8304</span>
-            </a>
-            <a href="mailto:lyonsservicegroup@gmail.com" class="contact-item">
-                <i class="fas fa-envelope"></i>
-                <span>Email:</span>
-                <span>lyonsservicegroup@gmail.com</span>
-            </a>
+    <div id="header-placeholder"></div>
+    <section>
+        <div class="contact-page">
+            <h1>Contact <span class="highlight">Us</span></h1>
+            <p class="subheading">At Lion Property Services, we're here to help. Find our contact information below or fill out
+                the form, and we'll get in touch with you shortly.</p>
+                <img src="/media/fullLogo512.png" alt="Logo" class="background-logo" />
+            <div class="contact-info">
+                <a href="tel:519-817-6900" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>Co-Owner: Brett Lyons</span>
+                    <span>519-817-6900</span>
+                </a>
+                <a href="tel:519-551-8304" class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>Co-Owner: Phil Lyons</span>
+                    <span>519-551-8304</span>
+                </a>
+                <a href="mailto:lyonsservicegroup@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email:</span>
+                    <span>lyonsservicegroup@gmail.com</span>
+                </a>
+            </div>
+            <form class="contact-form show-thank-you" action="contact-page-form.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="" pattern="^[0-9-\(\)\s]*$">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="">
+                <label for="message">Tell us how we can help</label>
+                <textarea id="message" name="message" placeholder="" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
         </div>
-        <form class="contact-form show-thank-you" action="contact-page-form.php" method="POST">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" placeholder="" pattern="^[0-9-\(\)\s]*$">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="">
-            <label for="message">Tell us how we can help</label>
-            <textarea id="message" name="message" placeholder="" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</section>
-<div id="footer-placeholder"></div>
-<div class="overlay"></div>
-<div class="modal" id="thank-you-modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Thank You!</h2>
-        <p>Thank you for your message! Someone from our team will be getting in touch shortly.</p>
-    </div>
-</div>
+    </section>
+    <div id="footer-placeholder"></div>
+    <div class="overlay"></div>
 <script src="../js/load-header-footer.js"></script>
 <script src="../js/script.js"></script>
 </body>
