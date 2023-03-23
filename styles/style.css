@@ -5,15 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Taking off any effects on mobile */
-@media only screen and (max-width: 767px) {
-
-    /* Style rules for mobile screens */
-    *:hover {
-        pointer-events: none;
-    }
-}
-
 /* Body Styles */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
