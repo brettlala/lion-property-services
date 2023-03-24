@@ -812,14 +812,80 @@ body.overlay-active .page-content *:not(.overlay-active) {
 }
 
 /* Footer Styles */
+
 footer {
-    background-color: #1c1c1c;
-    color: #fff;
-    text-align: center;
+    width: 100%;
+    background-color: #1C1C1C;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-footer div {
-    padding: 2rem 0;
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section a {
+    color: #fff;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section img {
+    max-width: 100%;
+    /* Make sure the image does not exceed its container's width */
+    height: auto;
+    max-height: 150px;
+    /* Set a maximum height for the image */
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 10px;
+    /* Update with your preferred background color */
+}
+
+@media (max-width: 700px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        flex: auto;
+        min-width: auto;
+        /* Allow sections to adjust to the container width */
+    }
 }
 
 /* Services Section on Homepage*/
@@ -842,7 +908,7 @@ footer div {
 .services h4 {
     font-size: 1.1rem;
     font-weight: lighter;
-    color: #04b022;
+    color: #fff;
     margin-bottom: 1.5rem;
 }
 
@@ -880,7 +946,7 @@ footer div {
 
 .service-item h3 {
     font-size: 1.2rem;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 1rem;
     background-color: #04b022;
     color: #fff;
@@ -1077,12 +1143,6 @@ footer div {
     margin-bottom: 2rem;
 }
 
-/* Company logo */
-.company-logo {
-    width: 100%;
-    max-width: 250px;
-}
-
 /* Form styles */
 .quote-section {
     display: flex;
@@ -1112,6 +1172,7 @@ footer div {
 }
 
 @media (max-width: 767px) {
+
     #header-placeholder {
         position: sticky;
         top: 0;
@@ -1216,6 +1277,10 @@ footer div {
     .content-right {
         margin-top: 0;
     }
+
+    .company-logo {
+        width: 50%;
+    }
 }
 
 /* Services page styles */
@@ -1225,6 +1290,7 @@ footer div {
     text-align: center;
     font-weight: lighter;
     font-size: 1.2rem;
+    color: #1c1c1c;
 }
 
 .services-section-page {
@@ -1647,4 +1713,16 @@ a {
         color: #04b022;
         padding: 1rem;
     }
+}
+
+/* 404 Page */
+
+img.four-oh-four-pg-pic {
+    height: 50vh;
+}
+
+/* Removing blue outline around linked images */
+img:focus {
+    outline: 2px solid transparent;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
 }

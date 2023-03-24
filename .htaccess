@@ -1,1 +1,3 @@
 DirectoryIndex homepage.html
+
+ErrorDocument 404 /404.html
