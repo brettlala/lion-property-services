@@ -44,12 +44,27 @@ mobileNav.addEventListener('click', (event) => {
       }
     });
 
-    if (form) {
+  if (form) {
       form.addEventListener('submit', (e) => {
         e.preventDefault(); // prevent default form submission behavior
 
+        // Submit the form using AJAX
+        const xhr = new XMLHttpRequest();
+        xhr.open(form.method, form.action);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = () => {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              // Redirect to the thank you page after the form is submitted
+              window.location.href = 'thank-you.html';
+            } else {
+              console.error('Form submission failed: ' + xhr.status);
+            }
+          }
+        };
+        xhr.send(new FormData(form));
+
         formModal.style.display = 'none';
-        showThankYouModal();
       });
     }
   })();
