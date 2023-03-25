@@ -354,37 +354,83 @@ a .section-button {
     }
 }
 
+
+
+
+
+
 /* Modal Pop up Home Page */
+
+.modal#form-modal {
+    z-index: 1000;
+}
+
 .modal-content {
     margin: 10% auto;
     padding: 1rem;
-    width: 50%;
+    width: 100%;
     max-width: none;
     border-radius: 10px;
     box-shadow: inset 0 0 0 2px #1c1c1c;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #1c1c1c;
+}
+
+.form-modal-title {
+    text-align: center;
 }
 
 .modal-content form {
-    max-width: 600px;
+    max-width: 1200px;
     margin: 0 auto;
 
 }
 
 .modal-content .form-group {
-    flex-direction: column;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .modal-content label {
-    margin-right: 0;
+    display: inline-block;
+    margin-right: 1rem;
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
+    width: 140px;
+    /* add fixed width to labels */
+    display: inline-block;
+    /* make labels sit next to each other */
 }
 
 .modal-content input {
     font-size: 1rem;
     padding: 0.5rem;
     border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 150px);
+        /* subtract width of labels from input fields */
+    margin-bottom: 1rem;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
     border-radius: 4px;
     width: 100%;
     margin-bottom: 1rem;
@@ -398,12 +444,15 @@ a .section-button {
 .form-group {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     margin-bottom: 1rem;
 }
 
 .form-group label {
     margin-bottom: 0.5rem;
+        display: inline-block;
+        min-width: 120px;
+        text-align: left;
+        padding-right: 1rem;
 }
 
 .form-group input,
@@ -455,6 +504,11 @@ a .section-button {
 .submit-button-modal:hover {
     opacity: .9;
 }
+
+
+
+
+
 
 /* Thank you modal */
 

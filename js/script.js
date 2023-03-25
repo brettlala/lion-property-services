@@ -5,7 +5,6 @@ document.addEventListener('headerAndFooterLoaded', function () {
     const closeModal = document.querySelector('.close');
     const form = document.querySelector('.quote-form-pop-up');
     const mainContent = document.querySelector('main');
-    const thankYouModal = document.getElementById('thank-you-modal');
 
 // Hamburger Menu start
 const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -53,39 +52,5 @@ mobileNav.addEventListener('click', (event) => {
         showThankYouModal();
       });
     }
-
-    window.addEventListener('click', (event) => {
-      if (event.target === thankYouModal) {
-        thankYouModal.style.display = 'none';
-      }
-    });
-
-  function showThankYouModal(formToSubmit) {
-    thankYouModal.style.display = 'block';
-    const closeModal = thankYouModal.querySelector('.close');
-    closeModal.onclick = () => {
-      thankYouModal.style.display = 'none';
-  };
-  // Submit the form after showing the thank you modal
-  formToSubmit.submit();
-}
-
-if (form) {
-  form.addEventListener('submit', (e) => {
-    e.preventDefault(); // prevent default form submission behavior
-
-    formModal.style.display = 'none';
-    showThankYouModal(form);
-  });
-}
-
-const otherForms = document.querySelectorAll('.show-thank-you');
-otherForms.forEach((otherForm) => {
-  otherForm.addEventListener('submit', (e) => {
-    e.preventDefault(); // prevent default form submission behavior
-    showThankYouModal(otherForm);
-  });
-});
-
   })();
 });
