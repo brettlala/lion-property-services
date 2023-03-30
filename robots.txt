@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /header.html
+Disallow: /footer.html
+
+Sitemap: https://www.lionpropertyservices.ca/sitemap.xml
