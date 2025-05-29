@@ -696,6 +696,13 @@ footer {
     height: 70vh;
 }
 
+.parallax-header {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
 .parallax-section::before {
     content: '';
     background-color: rgba(0, 0, 0, 0.5);
