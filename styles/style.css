@@ -701,7 +701,10 @@ footer {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: #fff;
+    position: relative;
+    z-index: 1;
 }
+    
 
 .parallax-section::before {
     content: '';
@@ -711,6 +714,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+    z-index: 0;
 }
 
 .parallax-content {
@@ -721,6 +725,7 @@ footer {
     flex-wrap: wrap;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1;
 }
 
 /* New styles */
