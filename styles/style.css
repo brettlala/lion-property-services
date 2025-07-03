@@ -166,6 +166,32 @@ section a:hover {
     }
 }
 
+/* Hero‐section social icons styled like the CTA button */
+.hero-social {
+  margin-top: .25rem; /* adjust value as needed */
+}
+
+.hero-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C1C1C;
+  border-radius: 4px;
+  width: 40px;      /* tweak size as needed */
+  height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-social a img {
+  width: 24px;      /* icon size inside the button */
+  height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.hero-social a:hover {
+  background-color: #04b022;
+}
+
 /*Second Section Homepage*/
 
 .section-container {
@@ -570,6 +596,63 @@ footer {
     padding: 10px;
     /* Update with your preferred background color */
 }
+
+/* Push the logo up and center it */
+.footer-logo {
+    position: relative;
+    top: -2rem; /* Adjust this value to push the logo up more or less */
+}
+
+/* "Follow Us:" label */
+.footer-follow {
+  text-align: center;
+  color: #fff;            /* white text */
+  font-size: 1rem;
+  margin: 0 0 0.5rem;     /* 0 top, 0 sides, 0.5rem bottom */
+}
+
+/* Footer social icons—bump up under the label */
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 0;          /* no extra top margin since we handled spacing */
+}
+
+/* Same button styling you already have */
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1C1C1C;
+  border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-social a:hover {
+  background-color: #04b022;
+}
+
+.footer-section:last-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;  /* controls space between logo, label, and icons */
+}
+
+/* Remove any default margins on the label */
+.footer-follow {
+  margin: 0;
+}
+
 
 @media (max-width: 700px) {
     .footer-container {
