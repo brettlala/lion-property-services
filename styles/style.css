@@ -861,13 +861,14 @@ footer {
 @media only screen and (max-width: 980px) {
     .parallax-section {
         background-attachment: scroll;
-        height: 800px;
+        height: 1000px;
         }
 
     .parallax-content {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        top: 350px
     }
 
     .logo-homepage {
